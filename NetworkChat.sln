@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkChat", "NetworkChat\NetworkChat.csproj", "{861CBB76-0EF4-44A8-93CB-7F158FCF7FDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetworkChat", "NetworkChat\NetworkChat.csproj", "{861CBB76-0EF4-44A8-93CB-7F158FCF7FDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSFW", "..\NSFW\NSFW\NSFW.csproj", "{1763E3D7-7FBC-4527-9D9E-48A2C09004FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{861CBB76-0EF4-44A8-93CB-7F158FCF7FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{861CBB76-0EF4-44A8-93CB-7F158FCF7FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{861CBB76-0EF4-44A8-93CB-7F158FCF7FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1763E3D7-7FBC-4527-9D9E-48A2C09004FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1763E3D7-7FBC-4527-9D9E-48A2C09004FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1763E3D7-7FBC-4527-9D9E-48A2C09004FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1763E3D7-7FBC-4527-9D9E-48A2C09004FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

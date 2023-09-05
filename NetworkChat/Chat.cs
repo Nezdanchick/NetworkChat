@@ -1,9 +1,11 @@
-﻿namespace NetworkChat
+﻿using NSFW;
+
+namespace NetworkChat
 {
     public partial class Chat : Form
     {
         private int _chatMessageCount = 0;
-        private int _chatLineHeight;
+        private readonly int _chatLineHeight;
 
         public Chat()
         {
@@ -15,10 +17,28 @@
             timer.Tick += Timer_Tick;
             timer.Start();
         }
-        int i = 0;
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            if (!User.Connected) // show msg box and return to lobby
+            {
+                timer.Stop();
+                MessageBox.Show(
+                    "Сheck the connection to the server try again",
+                    "Disconnected from server",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                Close();
+            }
+            UpdateChat();
+        }
+        private void UpdateChat()
+        {
+            UserSay("Nezdanchick", "lol");
+        }
+
         private void UserSay(string username, string text)
         {
-            labelChat.Text += $"{username}: {text}{i++}\n";
+            labelChat.Text += $"{username}: {text}\n";
             _chatMessageCount++;
             ShrinkText();
         }
@@ -36,17 +56,6 @@
                 _chatMessageCount--;
             }
             labelChat.Text = text;
-        }
-
-        private void Timer_Tick(object? sender, EventArgs e)
-        {
-            UpdateText();
-        }
-
-        private void UpdateText()
-        {
-            UserSay("Nezdanchick", "lol");
-
         }
 
         protected override void OnFormClosed(FormClosedEventArgs e)
