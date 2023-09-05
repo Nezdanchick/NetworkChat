@@ -30,29 +30,33 @@
         {
             components = new System.ComponentModel.Container();
             timer = new System.Windows.Forms.Timer(components);
-            treeView1 = new TreeView();
+            labelChat = new Label();
             SuspendLayout();
             // 
-            // treeView1
+            // labelChat
             // 
-            treeView1.Location = new Point(12, 12);
-            treeView1.Name = "treeView1";
-            treeView1.Size = new Size(121, 97);
-            treeView1.TabIndex = 0;
+            labelChat.AutoSize = true;
+            labelChat.Location = new Point(12, 9);
+            labelChat.Name = "labelChat";
+            labelChat.Size = new Size(70, 20);
+            labelChat.TabIndex = 0;
+            labelChat.Text = "Chat Text";
             // 
             // Chat
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(treeView1);
+            ClientSize = new Size(914, 600);
+            Controls.Add(labelChat);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Chat";
             Text = "Chat";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private System.Windows.Forms.Timer timer;
-        private TreeView treeView1;
+        private Label labelChat;
     }
 }
