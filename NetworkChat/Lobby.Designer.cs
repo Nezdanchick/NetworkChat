@@ -32,11 +32,12 @@
             textIP = new TextBox();
             buttonConnect = new Button();
             buttonHost = new Button();
+            linkLabelLocalIP = new LinkLabel();
             SuspendLayout();
             // 
             // textUsername
             // 
-            textUsername.Location = new Point(14, 16);
+            textUsername.Location = new Point(12, 13);
             textUsername.Margin = new Padding(3, 4, 3, 4);
             textUsername.Name = "textUsername";
             textUsername.Size = new Size(114, 27);
@@ -46,7 +47,7 @@
             // 
             // textIP
             // 
-            textIP.Location = new Point(14, 55);
+            textIP.Location = new Point(12, 48);
             textIP.Margin = new Padding(3, 4, 3, 4);
             textIP.Name = "textIP";
             textIP.Size = new Size(114, 27);
@@ -56,8 +57,8 @@
             // 
             // buttonConnect
             // 
-            buttonConnect.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonConnect.Location = new Point(145, 16);
+            buttonConnect.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonConnect.Location = new Point(137, 13);
             buttonConnect.Margin = new Padding(3, 4, 3, 4);
             buttonConnect.Name = "buttonConnect";
             buttonConnect.Size = new Size(86, 31);
@@ -68,8 +69,8 @@
             // 
             // buttonHost
             // 
-            buttonHost.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonHost.Location = new Point(145, 55);
+            buttonHost.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonHost.Location = new Point(137, 48);
             buttonHost.Margin = new Padding(3, 4, 3, 4);
             buttonHost.Name = "buttonHost";
             buttonHost.Size = new Size(86, 31);
@@ -78,18 +79,31 @@
             buttonHost.UseVisualStyleBackColor = true;
             buttonHost.Click += ButtonHost_Click;
             // 
+            // linkLabelLocalIP
+            // 
+            linkLabelLocalIP.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            linkLabelLocalIP.AutoSize = true;
+            linkLabelLocalIP.Location = new Point(14, 86);
+            linkLabelLocalIP.Name = "linkLabelLocalIP";
+            linkLabelLocalIP.Size = new Size(100, 20);
+            linkLabelLocalIP.TabIndex = 4;
+            linkLabelLocalIP.TabStop = true;
+            linkLabelLocalIP.Text = "Show Local IP";
+            linkLabelLocalIP.LinkClicked += ShowLocalIP_LinkClicked;
+            // 
             // Lobby
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(245, 101);
+            ClientSize = new Size(235, 115);
+            Controls.Add(linkLabelLocalIP);
             Controls.Add(buttonHost);
             Controls.Add(buttonConnect);
             Controls.Add(textIP);
             Controls.Add(textUsername);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Lobby";
-            Text = "Chat";
+            Text = "Lobby";
             FormClosing += Lobby_FormClosing;
             ResumeLayout(false);
             PerformLayout();
@@ -101,5 +115,6 @@
         private TextBox textIP;
         private Button buttonConnect;
         private Button buttonHost;
+        private LinkLabel linkLabelLocalIP;
     }
 }

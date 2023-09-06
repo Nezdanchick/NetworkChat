@@ -38,12 +38,12 @@ namespace NetworkChat.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string IPAddres {
+        public string IPEndPoint {
             get {
-                return ((string)(this["IPAddres"]));
+                return ((string)(this["IPEndPoint"]));
             }
             set {
-                this["IPAddres"] = value;
+                this["IPEndPoint"] = value;
             }
         }
     }

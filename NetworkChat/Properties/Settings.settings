@@ -5,7 +5,7 @@
     <Setting Name="Username" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="IPAddres" Type="System.String" Scope="User">
+    <Setting Name="IPEndPoint" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
